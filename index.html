@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="leaflet/leaflet.css" />
+  <script type="text/javascript" src="leaflet/leaflet.js"></script>
+  <script>
+    function initMap() {
+      var map = L.map('map').setView([44.806408, -0.604414], 16);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      L.marker([44.806408, -0.604414], {
+        icon: L.icon({iconUrl: 'dot.png'})
+      }).addTo(map);
+    }
+  </script>
+</head>
+<body onload="initMap()">
+  <div style="width:800px;height:400px" id="map"></div>
+</body>
+</html>
