@@ -10,7 +10,13 @@
     function initMap() {
       var map = L.map('map').setView([44.4247, 0.02575], 16);
 
-      var tileServer = 'http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
+      // Relief
+      var tileServer = 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png';
+
+      // Satellite
+      // var tileServer = 'http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
+
+      // Carte
       // var tileServer = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 
       L.tileLayer(tileServer).addTo(map);
